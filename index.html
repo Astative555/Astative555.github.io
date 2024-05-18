@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Summative Assessment 1</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 80%; 
+            margin: auto; 
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            border-bottom: 2px solid black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        th.name, td.name {
+            text-align: left;
+        }
+        .top-row th {
+            background-color: lightblue;
+        }
+        img {
+            width: 100px; 
+            height: auto;
+        }
+        .supplier-cell {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr class="top-row">
+                <th colspan="6">INVENTORY SYSTEM</th>
+            </tr>
+            <tr>
+                <th>ID</th>
+                <th class="name">Name</th>
+                <th>Quantity</th>
+                <th>Supplier</th>
+                <th>Date</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10001</td>
+                <td class="name">Piattos Cheese Flavored Potato Chips</td>
+                <td>1000</td>
+                <td class="supplier-cell" rowspan="8">URC</td>
+                <td rowspan="2">2024-05-11</td>
+                <td rowspan="8"><img src="Piattos.png" alt="Piattos Chips"></td>
+            </tr>
+            <tr>
+                <td>10002</td>
+                <td class="name">Piattos Sour Cream Flavored Potato Chips</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>10003</td>
+                <td class="name">Piattos Cheese Flavored Potato Chips</td>
+                <td>3000</td>
+                <td rowspan="2">2024-05-13</td>
+            </tr>
+            <tr>
+                <td>10004</td>
+                <td class="name">Piattos Roast Beef Flavored Potato Chips</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>10005</td>
+                <td class="name">Piattos Nacho Pizza Flavored Potato Chips</td>
+                <td>4000</td>
+                <td rowspan="3">2024-05-15</td>
+            </tr>
+            <tr>
+                <td>10006</td>
+                <td class="name">Piattos Spicy Cheese Flavored Potato Chips</td>
+                <td>240</td>
+            </tr>
+            <tr>
+                <td>10007</td>
+                <td class="name">Piattos Salted Potato Flavored Potato Chips</td>
+                <td>1000</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
