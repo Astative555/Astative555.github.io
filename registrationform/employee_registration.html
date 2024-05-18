@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Employee Registration Form</h1>
+        <form action="/submit_registration" method="POST">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+                
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+                
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+                
+                <label for="zip">ZIP Code:</label>
+                <input type="text" id="zip" name="zip" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Job Information</legend>
+                <label for="jobtitle">Job Title:</label>
+                <input type="text" id="jobtitle" name="jobtitle" required>
+                
+                <label for="department">Department:</label>
+                <input type="text" id="department" name="department" required>
+                
+                <label for="startdate">Start Date:</label>
+                <input type="date" id="startdate" name="startdate" required>
+                
+                <label for="employeeid">Employee ID:</label>
+                <input type="text" id="employeeid" name="employeeid" required>
+                
+                <label for="employmenttype">Employment Type:</label>
+                <select id="employmenttype" name="employmenttype" required>
+                    <option value="fulltime">Full-time</option>
+                    <option value="parttime">Part-time</option>
+                    <option value="contract">Contract</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Emergency Contact</legend>
+                <label for="emergencycontact">Emergency Contact Name:</label>
+                <input type="text" id="emergencycontact" name="emergencycontact" required>
+                
+                <label for="relationship">Relationship:</label>
+                <input type="text" id="relationship" name="relationship" required>
+                
+                <label for="emergencyphone">Emergency Contact Phone Number:</label>
+                <input type="tel" id="emergencyphone" name="emergencyphone" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Login Information</legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <label for="confirmpassword">Confirm Password:</label>
+                <input type="password" id="confirmpassword" name="confirmpassword" required>
+            </fieldset>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
