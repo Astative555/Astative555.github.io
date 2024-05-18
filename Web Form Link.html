@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Web Form</title>
+    <style>
+        body {
+            background-image: url('Cyber Punk Background.jpg');
+            background-size: cover;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        form {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border: 2px solid #ff0066;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #ff0066;
+            width: 300px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #ff0066;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1em;
+            box-shadow: 0 0 10px #ff0066;
+        }
+
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+
+        button {
+            background: #001eff;
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            box-shadow: 0 0 10px #ff0066;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #bd00ff;
+            box-shadow: 0 0 10px #bd00ff;
+        }
+
+        .required {
+            color: #ff0066;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <ul>
+            <li>Your Name<span class="required">*</span>:
+                <ul>
+                    <li><input type="text" name="your-name" required></li>
+                </ul>
+            </li>
+            <li>Email<span class="required">*</span>:
+                <ul>
+                    <li><input type="email" name="email" required></li>
+                </ul>
+            </li>
+            <li>Contact No<span class="required">*</span>:
+                <ul>
+                    <li><input type="tel" name="contact-no" required></li>
+                </ul>
+            </li>
+            <li>Message<span class="required">*</span>:
+                <ul>
+                    <li><textarea name="message" required></textarea></li>
+                </ul>
+            </li>
+            <li>Required field<span class="required">*</span></li>
+            <li><button type="submit">Send</button></li>
+        </ul>
+    </form>
+</body>
+</html>
