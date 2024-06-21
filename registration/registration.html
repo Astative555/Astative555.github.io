@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            background-color: #0f0f0f;
+            color: #00ff00;
+            font-family: 'Press Start 2P', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: inline-block;
+        }
+
+        input[type="button"] {
+            background-color: #ff00ff;
+            border: none;
+            color: #ffffff;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-family: 'Press Start 2P', cursive;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="button"]:hover {
+            background-color: #00ffff;
+            box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+        }
+    </style>
+    <script type="text/javascript">
+        function submitToPage() {
+            window.location = "http://www.google.com";
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <p>If you click the following button, you will be redirected to the home page.</p>
+        <form>
+            <input type="button" value="Redirect Me" onclick="submitToPage();" />
+        </form>
+    </div>
+</body>
+</html>
