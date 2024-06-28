@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login to Canvas</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('FEU_BACKGROUND.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: #e0f7e9; /* Fallback color */
+      margin: 0;
+      padding: 0;
+      color: #ffffff;
+    }
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 40px;
+      border-radius: 10px;
+      position: relative; /* Position relative for centering */
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .logo img {
+      max-width: 100%;
+      height: auto;
+      max-height: 160px; /* Limit max height */
+    }
+    .btn-primary {
+      background-color: #4caf50;
+      border: none;
+      padding: 12px 24px;
+      margin-top: 10px;
+    }
+    .btn-primary:hover {
+      background-color: #45a049;
+      color: #ffffff;
+    }
+    .form-check-input:checked {
+      background-color: #4caf50;
+      border-color: #4caf50;
+    }
+    .invalid-feedback {
+      color: #dc3545;
+    }
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .browse-courses-link {
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #388e3c;
+      text-decoration: underline;
+    }
+    .text-bold {
+      font-weight: bold;
+    }
+    #forgotPasswordLinkLogin,
+    #backToLoginLink {
+      font-weight: normal;
+      text-decoration: underline;
+      display: block;
+      margin-top: 10px; /* Adjusted margin top */
+      text-align: left;
+    }
+    .form-group.form-check {
+      margin-bottom: 20px;
+    }
+    .ml-3 {
+      margin-left: 0.35rem !important; /* Adjust margin as needed */
+    }
+    .form-group .form-check-label {
+      margin-bottom: 0;
+    }
+    .footer-links {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      text-align: center; /* Center align the links */
+    }
+    .footer-links a {
+      margin: 0 5px; /* Add spacing between links */
+      position: relative;
+    }
+    .footer-links a:not(:last-child):after {
+      content: "|"; /* Separator between links */
+      margin-left: 5px;
+      margin-right: 5px;
+      color: #ffffff;
+    }
+
+    /* Media Queries for Responsive Design */
+    @media (max-width: 576px) {
+      .container {
+        max-width: 100%;
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://instructure-uploads-apse1.s3-ap-southeast-1.amazonaws.com/account_98220000000000001/attachments/1/feulogo.png?AWSAccessKeyId=AKIAIDDUVOH2KGZFBNAQ&amp;Expires=1949782073&amp;Signature=coqGF5sk0YnCv86vjRlDpp45b9I%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0" alt="Far Eastern University">
+      <a href="#" class="browse-courses-link">Browse Courses</a>
+    </div>
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <label for="username" class="text-bold">Username</label>
+        <input type="text" class="form-control" id="username" required>
+        <div class="invalid-feedback">
+          Please enter your username.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password" class="text-bold">Password</label>
+        <input type="password" class="form-control" id="password" required>
+        <div class="invalid-feedback">
+          Please enter your password.
+        </div>
+      </div>
+      <div class="form-group form-check d-flex justify-content-between align-items-center">
+        <div>
+          <input type="checkbox" class="form-check-input" id="rememberMe">
+          <label class="form-check-label text-bold" for="rememberMe">Stay signed in</label>
+        </div>
+        <button type="submit" class="btn btn-primary text-bold btn-lg">Log In</button>
+      </div>
+      <a href="#" id="forgotPasswordLinkLogin">Forgot Password?</a>
+    </form>
+    <form id="forgotPasswordForm" style="display: none;" novalidate>
+      <div class="form-group">
+        <label for="forgotUsername" class="text-bold">Username</label>
+        <input type="text" class="form-control" id="forgotUsername" required>
+        <div class="invalid-feedback">
+          Please enter your username.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block text-bold">Request Password</button>
+      <div class="text-center mt-3">
+        <a href="#" id="backToLoginLink">Back to Login</a>
+      </div>
+    </form>
+    
+    <!-- Footer Links -->
+    <div class="footer-links">
+      <a href="#">Help</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Notice</a>
+      <a href="#">Acceptable Use Policy</a>
+      <span>|</span>
+      <a href="#">Facebook</a>
+      <a href="#">X.com</a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        var forms = document.getElementsByClassName('needs-validation');
+        Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+
+      document.getElementById('forgotPasswordLinkLogin').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('forgotPasswordForm').style.display = 'block';
+      });
+
+      document.getElementById('backToLoginLink').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('loginForm').style.display = 'block';
+        document.getElementById('forgotPasswordForm').style.display = 'none';
+      });
+    })();
+  </script>
+</body>
+</html>
